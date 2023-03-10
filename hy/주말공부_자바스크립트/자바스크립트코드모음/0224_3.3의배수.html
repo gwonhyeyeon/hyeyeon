@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3의 배수</title>
+</head>
+<body>
+    <script>
+    
+        // var userNumbers;
+        var userNumbers = prompt("숫자를 입력하세요");
+        
+        // if (userNumbers==null){
+        // document.write("취소되셨습니다");}
+
+        // else {
+        //         var userNumbers = parseInt(userNumbers);
+        //         if(userNumbers%3==0){
+        //         document.write(userNumbers + "은/는 3의 배수입니다.<br>");
+        //     }
+        //         else
+        //         {")
+        //     }
+        //   }
+
+        if(userNumbers != null){
+            var userNumbers = parseInt(userNumbers);
+            if(userNumbers % 3 == 0)
+            {
+                document.write(userNumbers + " 3의 배수입니다.")
+            }
+            else
+               document.write(userNumbers + " 3의 배수가 아닙니다.")
+
+        }
+        else
+        document.write("취소되셨습니다.");
+
+    </script>
+    
+</body>
+</html>

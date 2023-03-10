@@ -1,0 +1,30 @@
+
+
+
+1. 작업폴더(작업트리)  f1.txt f2.txt
+    추적되지 않는 untracked files 한번도 버전관리 하지 않은 파일이다. 
+
+
+2. <스테이지> staging area는 commit을 하기 전에 commit할 파일들을 골라놓는 곳입니다. 
+그리고 staging area에 파일 넣는 행위를 staging이라고 합니다. 
+git add 명령어로 staging 할 수 있습니다. 
+git add . : 모든 파일을 다 스테이깅 할 수 있다
+
+
+3. <local 저장소> repository는 commit된 파일의 버전들을 모아놓는 곳입니다. 
+repository의 실체를 구경하고 싶으면 작업폴더안에 숨겨져 있는 .git 폴더 열어보면 됩니다. 
+    git commit -m '첫파일을 만들었음' 짧게 메시지를 남겨야함 
+
+    <명령어>
+
+    git status      상태창을 보여줘 
+    git log --all --online  commit된 기록을 한 눈에 파악하고 싶을 때
+
+    git push -u 원격저장소주소 main
+    
+    - 로컬저장소의 main 브랜치를 원격저장소에 올리라는 뜻입니다. 다른 브랜치도 올릴 수 있음
+    참고로 -u 옵션은 방금 입력한 주소 기억해두라는 뜻입니다. 
+    다음부터는 주소를 길게 입력안하고 git push만 입력해도 잘됩니다. 
+
+    원격 repository 주소는 이렇게 https://부터 시작해서 .git으로 끝납니다. 
+    이제부턴 git push만 해도 기억해서 들어가게 된다. 
