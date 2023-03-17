@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <title>Document</title>
+    <script>
+        $(document).ready(function(){
+            $("#out").click(function(){
+                $("img").fadeOut("slow");
+            });
+            $("#in").click(function(){
+                $("img").fadeIn("slow");//천천히 불투명하게
+            });
+            $("#toggle").click(function(){
+                $("img").fadeToggle("slow");//천천히 투명/불투명하게
+            });
+            $("#to50").click(function(){
+                $("img").fadeTo("slow",0.5); //천천히 반투명하게 
+            });
+            $("#to10").click(function(){
+                $("img").fadeTo("slow",0.1);//천천히 0.1만큼 불투명하게
+            });
+            $("#to100").click(function(){
+                $("img").fadeTo("slow",1.0); //천천히 1.0만큼 불투명하게(fadein)
+            });
+        })
+    </script>
+</head>
+<body>
+    <button id="out">fadeout</button>
+    <button id="in">fadeIn</button>
+    <button id="toggle">fadeToggle</button>
+    <button id="to50">opacity 50%</button>
+    <button id="to10">opacity 10%</button>
+    <button id="to100">opacity 100%</button>
+    <p></p>
+    <img name="pic1" src="http://placehold.it/100x100" alt="플레이스홀드">
+</body>
+</html>

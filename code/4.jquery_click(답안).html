@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Animaite Basic</title>
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+        $(document).ready(function(){
+            //이벤트 연결합니다.
+            $('h1').hover(function(){
+                $(this).css({
+                    background:'red',
+                    color: 'white'
+                });
+            }, function(){
+                $(this).css({
+                    background: '',
+                    color:''
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Click</h1>
+</body>
+</html>

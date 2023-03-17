@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        /*절대 경로와 좌표를 활용해 배치
+        z-index : 이미지가 먼저 배치되는 순서를 나타냄
+        z라는 것은 상하좌우의 2차원이 아니라 앞/뒤 3차원 개념임
+        z인덱스 값이 작을 수록 먼저 표현되므로 나중에 표현되는 값에
+        좌표상 겹치면 가려짐*/
+        div {position: absolute;}
+        img {position: absolute;}
+        /*spadeA {z-index: -3; left: 10px; top: 20px;}
+        #spade2 {z-index: 2; left: 40px; top: 30px;}*/
+        #spadeA {z-index: 2; left: 0px; top: 20px;}
+        #spade2 {z-index: -3; left: 0px; top: 20px;}
+        #spade3 {z-index: 3; left: 80px; top: 40px;}
+        #spade7 {z-index: 7; left: 120px; top: 50px;}
+        #spadeA:hover{left:40px; top: 30px;}
+    </style>
+</head>
+<body>
+    <h3>z-index 프로퍼티</h3>
+    <div>
+        <img src="C:\Users\Administrator\Desktop\풀스택\6일차\spade-A.png" alt="스페이드A" id="spadeA" 
+        width="100" height="140">
+        <img src="C:\Users\Administrator\Desktop\풀스택\6일차\spade-2.png" alt="스페이드2" id="spade2" 
+        width="100" height="140">
+        <img src="C:\Users\Administrator\Desktop\풀스택\6일차\spade-3.png" alt="스페이드3" id="spade3" 
+        width="100" height="140">
+        <img src="C:\Users\Administrator\Desktop\풀스택\6일차\spade-7.png" alt="스페이드7" id="spade7" 
+        width="100" height="140">
+    </div>   
+</body>
+</html>

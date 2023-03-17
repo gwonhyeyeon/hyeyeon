@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <title>Document</title>
+    <style>
+        #div1 { background-color: beige;
+                color : brown;
+            height: 20px;
+         text-align: center;
+         border: 1px solid black;}
+        #div2 { background-color: rgba(231, 231, 134, 0.92);
+                height: 200px;
+            text-align: center;
+            color: red}
+        
+    </style>
+    <script>
+        $(document).ready(function(){
+            $("#div2").hide();
+            $("#div1").click(function(){
+                $("#div2").slideDown(1500);
+            });
+        });
+        $(document).ready(function(){
+            $("#div1").click(function(){
+                $("#div2").fadeTo("slow",0.5);
+            });
+        });
+        $(document).ready(function(){
+            $("#div2").hide();
+            $("#div1").click(function(){
+                $("#div2").slideUp(1500);
+            });
+        });
+
+    </script>
+</head>
+<body>
+    <div id="div1">[오늘의 공지사항]</div>
+    <div id="div2">
+        <br>
+        <br>
+        <br>
+        오늘은 <strong>jquery</strong> 프로그램을 학습합니다.<br>
+        예제를 작성한 후 실행해보세요.</div>
+    
+</body>
+</html>

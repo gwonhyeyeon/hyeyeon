@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        #box {
+            width: 100px; height: 100px;
+            background-color: red;
+        }
+
+        #box:hover{
+            background-color: blue;
+            border-radius: 50px;
+        }
+    </style>
+           <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+           <script>
+               $(document).ready(function(){
+                   $('#box').hover(function(){
+                      //스타일을 변경합니다.
+                      $('#box').addclass('hover'); 
+                   }, function(){
+                       $('#box').removeClass('hover');
+                   });
+               });
+    </script>
+</head>
+<body>
+    <div id="box"></div>
+</body>
+</html>
+<!--클래스 조작메소드
+addclass()클래스추가
+removeclass()클래스제거
+toggleclass()클래스 전환-->

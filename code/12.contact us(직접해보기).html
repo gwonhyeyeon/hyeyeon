@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Contact us</title>
+    <style>
+        form{   margin-left: 30px;}
+        table{  line-height: 3;}
+        #f{     text-align: right;}
+        #a, #b, #c, #d{ 
+                margin-left: 5px;}
+        #a:hover, #b:hover{ 
+                background-color: aliceblue;
+                transform: scaleX(2.0);
+                transform: scaleY(2.0);}
+        #c:hover{ 
+                background-color: aliceblue;}
+        #a:focus{ 
+                color: red;}
+    </style>
+</head>
+<body>
+    <h3>CONTACT us</h3>
+    <hr>
+    <form>
+        <table>
+            <tr><td id="f">name</td>
+                <td><input type="text" id="a" placeholder="현택이" size="25"></td></tr>
+            <tr><td id="f">email</td>
+                <td><input type="email" id="b" placeholder="citadell@naver.com" size="25"></td></tr>
+            <tr><td id="f">Comment</td>
+                <td><textarea id="c" rows="2" placeholder="메시지를 남겨주세요"></textarea></td></tr>
+            <tr><td id="f">send</td>
+                <td><input type="button" value=숙제제출 id="d"></td></tr>
+        </table>
+    </form>
+</body>
+</html>

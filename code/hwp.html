@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>특정 값으로 끝나는 속성에 스타일을 적용한다</title>
+    <style>
+        ul {
+            list-style: none;
+        }
+        li a {
+            line-height: 30px;
+            font-size: 14px;
+            color: blue;
+            text-decoration: none;
+        }
+        /*a태그의 href 속성 값이 hwp로 끝나는 요소 선택*/
+        a[href $="hwp"] {/*연결한 파일의 확장자가 hwp인 링크*/
+            background: url("C:/Users/Administrator/Desktop/6일차/hwp_icon.gif") center right no-repeat;
+       /*배경으로 hwp아이콘 표시*/
+       padding-right: 25px; /*아이콘을 표시할 수 있도록 오른쪽에 25px 여백*/
+        }
+        /*a태그의 href 속성 값이 xlsx로 끝나는 요소 선택*/
+        a[href $="xlsx"] {/*연결한 파일의 확장자가 xlsx인 링크*/
+            background: url("C:/Users/Administrator/Desktop/6일차/excel_icon.gif") center right no-repeat;
+            padding-right: 25px;
+        }
+
+    </style>
+</head>
+<body>
+    <h3>회사 소개 파일 다운 받기</h3>
+    <ul>
+        <li><a href="C:\Users\Administrator\Desktop\6일차\intro.hwp">hwp파일</a></li>
+        <li><a href="C:\Users\Administrator\Desktop\6일차\intro.xlsx">xlsx파일</a></li>
+    </ul>   
+</body>
+</html>

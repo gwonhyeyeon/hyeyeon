@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        p { text-align: center;}
+        button{ display: inline;}
+        div { text-align: center;}
+    </style>
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#bt1').click(function(){
+                $('#img').animate({
+                   width: 100
+                });
+            });
+              $('#bt2').click(function(){
+                $('#img').animate({
+                   width: 200
+                });
+            });
+            $('#bt3').click(function(){
+                $('#img').animate({
+                   width: 300
+                });
+            });
+        });
+    
+    </script>
+</head>
+
+<body>
+    <h3>ANIMATION 실습1</h3>
+    <hr>
+    <div>
+    <p>버튼을 누르면 그림의 크기가 바뀝니다.</p>
+    <button id="bt1">가로 100픽셀</button>
+    <button id="bt2">가로 200픽셀</button>
+    <button id="bt3">가로 300픽셀</button><br>
+    <img id="img" src="C:\Users\Administrator\Desktop\풀스택\10일차\Golde.jpg"></div>
+</body>
+</html>

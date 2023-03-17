@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#mio1").click(function(){
+                $(this).animate({
+                left: 20
+                },1000)
+            });
+            $("#mio2").click(function(){
+                $(this).animate({
+                left: 20
+                },1500);
+            });
+            $("#mio3").click(function(){
+                $(this).animate({
+                left: 20
+                },2000);
+            })
+    });
+     $(document).ready(function(){
+            $("button").click(function(){
+                $("#mio1").animate({
+                left : 400        })
+            });
+            $("button").click(function(){
+                $("#mio2").animate({
+                    left : 400
+                });
+            });
+            $("button").click(function(){
+                $("#mio3").animate({
+                    left : 400
+                });
+            })
+    });
+    </script>
+    <style>
+       #big{ border: 1px solid black;
+            width: 500px;
+            height: 300px;}
+        img{width: 100px;
+            height: 95px;
+            }
+        #mio1 {position: absolute;
+                top: 10px;
+                right: 430px}
+        #mio2 {position: absolute;
+                top: 110px;
+                right: 430px}
+        #mio3 {position: absolute;
+                top: 200px;
+                right: 430px}
+    </style>
+</head>
+<body>
+    <div id="big">
+    <div><img id="mio1" src="C:\Users\Administrator\Desktop\풀스택\10일차\mio.png"></div>
+    <div><img id="mio2" src="C:\Users\Administrator\Desktop\풀스택\10일차\mio.png"></div>
+    <div><img id="mio3" src="C:\Users\Administrator\Desktop\풀스택\10일차\mio.png"></div>
+    </div>
+    <button>초기화</button>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Event Basic</title>
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+        //이벤트 연결합니다. 
+        $(document).ready(function(){
+            $('a').click(function(event){
+                //출력합니다.
+            alert('click');
+        //기본 이벤트를  제거합니다.
+        //event.preventDefault();
+        return false;
+    });
+        });
+    </script>
+</head>
+<body>
+    <a href="http://hanb.co.kr">Hanbit Academy</a>
+</body>
+<!-- NOTE_return false
+jQuery 라이브러리에서 return false를 사용하면 기본 이벤트와
+이벤트 전달이 함께 제거됨. -->

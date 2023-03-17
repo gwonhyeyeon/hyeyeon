@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>jQuery Basic</title>
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('img').attr({
+                alt: 'jQuery 라이브러리를 사용한 속성 지정',
+                src: 'http://placehold.it/100X100',
+                width: 100
+            });
+        });
+    </script>
+</head>
+<body>
+    <img />
+    <img />
+    <img />
+</body>
+</html>
+
+<!--2. attr() 메소드의 매개변수에 객체를 넣어 속성을 조작하는 방법
+$('img').attr({
+    src:'http://palcehold.it/300*200',
+    width: 300,
+    height: 200
+});-->

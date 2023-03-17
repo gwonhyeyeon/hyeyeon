@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="..\css\darkmode.css">
+    
+</head>
+<body>
+    <div id="toggle-box">
+        <button onclick="darkmode()">다크 모드로 바꾸기</button>
+    </div>
+    
+    <div id="contents">
+        <p>classList와 toggle 메서드를 사용하면 필요한 스타일을 껐다 켰다 할 수 있기 때문에 
+            다양하게 사용할 수 있습니다. </p>
+        <p>오른쪽 위에 있는 버튼을 클릭할 때마다 다크 모드, 또는 라이트 모드로 바뀝니다.</p>
+    </div>
+
+    <script src="..\js\darkmode.js"></script>
+</body>
+</html>
+
+
+<!-- getElementsByClassName() 메서드는 HTMCollection이 반환됩니다. 
+HTMLCollection은 배열과 비슷한 형태를 가지고 있지만,
+실제로는 배열이 아닌 유사배열 객체입니다. 
+이러한 htmlCollection은 배열과 다르게 forEach() 와 같은 배열 메서드를 사용할 수 없습니다. 
+
+따라서 getelementbyclassname()메서드로 선택한 요소에 대해서는 for 루프나 array.from()메서드를
+사용하여 배열 형태로 변환해주어야 forEach()와 같은 배열 메서드를 사용할 수 있다. 
+
+var user = document.getElementByClassName("user");
+    for ( var i =0; i < user.length; i++) {
+        user[i].addEventListner("click", function(){
+            this.class.list.toggle("blue-italic");
+        });
+    }-->

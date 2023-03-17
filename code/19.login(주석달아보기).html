@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <style>
+        /*구글 웹폰트 사용 */
+    @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+        /*전체에 적용되는 스타일
+        전체를 border-box형태로 지정하고 margin과 padding을 0으로 하여 꽉 찬 화면처럼 설정*/
+        *{  margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            /*box-sizing은 테두리 영역 크기를 결정하는 요소 : content-box, border-box
+                content-box : 지정한 width, height값을 컨텐츠 영역에만 적용
+                border-box : 지정한 width, height값을 전체 영역에 적용하는 것
+                             border, padding, margin 세가지 요소 합친 것.*/
+            font-family: sans-serif; /*구글 웹폰트 중 snas-serif체 사용*/  
+        }
+        .login{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            /*border : 1px solid black;*/
+        }
+        .login h1{
+            font-size: 30px;
+            margin: 20px;
+            font-weight: bold;
+        }/* Login 제목은 font-size는 30px로 설정하고, margin 4면 모두 20px, 굵게 표시 */
+
+        .login .box {
+            position: relative;
+            display: block;
+        }/*  */
+
+        .login .box input{
+            width: 300px;
+            height: 50px;
+            border: none;
+            border-bottom: 2px solid #adadad;
+            /* 아이디와 패스워드를 치기 위한 공간의 크기는 width 300px height 50px
+            공간 영역의 전체 border라인은 없애고,
+            border-bottom에만 2px로 선 형태로 나타냄 컬러는 #adadad*/
+            outline: none;
+            margin-bottom: 20px;
+            font-size: 15px;
+        }
+
+        .btn {
+            width: 300px;
+            height: 50px;
+            margin-bottom: 20px;
+            background: linear-gradient(125deg, #81ecec, #7869ec, #81ecec);
+            /* linear-gradient (<각도> to <방향>, color)*/
+            /* 버튼 배경 색상을 단색이 아닌 그라데이션 효과를 줌
+             to 방향 생략하면 to bottom으로 인식, 125도 각도로 아래쪽으로 이동 */
+            background-position: left;
+            background-size: 200%;
+            transition: 0.4s; /*background-position:left에서 light로 transition 0.4s 동안*/
+            color: white;
+            border: none;
+            cursor: pointer; /*마우스 대면 커서는 포인터로 표시*/
+            font-weight: bold;/* 굵게*/
+        }
+        .btn:hover{
+            background-position: right; 
+            /*마우스hover했을때 background-position이 오른쪽으로 이동, 
+            그라데이션으로 표현 된 배경색상이 움직이는 효과*/
+        }
+        .bottom p{
+            display: inline; /*id/password찾기와 회원가입 링크를 한 줄에 위치하도록 inline*/
+            font-size: 15px;
+            padding: 10px;
+        }
+        .bottom p a{
+            text-decoration: none;/* 링크에 밑줄 없앰*/
+            color: gray; /*글자 색상 gray*/
+        }
+    </style>
+</head>
+<!--화면 전체에 div를 활용하여 전체 박스를 만들고 안에 4개의 하위 div영역 만들어 배치
+각 div영역에 각각 다른 스타일 적용을 위하여 다른 id로 설정 
+회원가입을 하거나 로그인 버튼을 눌렀을 때 링크로 다른 페이지로 이동하기 위하여 전체 div영역 아래 form태그로
+아래 하위 영역 div박스들을 묶어주었다. -->
+<body>
+    <div class="login">
+        <form action="#">
+            <h1>Login</h1>
+            <div class="box">
+            <input type="text" name="id" id="id" placeholder="ID">
+            <!--아이디를 치는 영역의 타입은 텍스트이며, 화면에 ID가 표시되도록 되어있다.(placeholder)-->
+            </div>
+            <div class="box">
+            <input type="password" name="pass" id="pass" placeholder="PASSWORD">
+            <!--아이디를 치는 영역의 타입은 password이기 때문에 비밀번호를 치면 ***처리된다. 
+                화면에 PASSWORD가 표시되도록 되어있다.(placeholder)-->
+            </div>
+            <div class="box">
+                <button type="submit" class="btn" value="JOIN">J O I N</button>
+            <!--input botton type으로 전송버튼을 만들었다.)-->
+            </div>
+            <div class="bottom">
+                <p><a href="#">ID/Password 찾기</a></p>
+                <p><a href="./20.signup.html">회원가입</a></p>
+                <!--id/password찾기와 회원가입은 링크로 연결 / 회원가입을 누르면 회원가입을 
+                    할 수 있는 화면으로 이동한다.-->
+            </div>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h3>회원 가입 양식</h3>
+    <form action="" method="get">
+    <table>
+        <tbody>
+                    <tr><td>- 아이디</td><td><input type="text" size="20" value=""></td></tr>
+                    <tr><td>- 비밀번호</td><td><input type="password" size="20" value=""></td></tr>
+                    <tr><td>- 비밀번호 확인</td><td><input type="password" size="20" value=""></td></tr>
+                    <tr><td>- 이름</td><td><input type="text" size="20" value=""></td></tr>
+                    <tr><td>- 성별</td><td><input type="radio" name="gender" value="f">여성<input type="radio" name="gender" value="m">남성</td></tr>
+                    <tr><td>- 전화번호</td>
+                        <td colspan="2">
+                            <select name="tel">
+                                <option value="02" checked>02</option>
+                                <option value="010">010</option>
+                                <option value="011">011</option>
+                                <option value="016">016</option>
+                                <option value="019">019</option>
+                                <option value="">직접입력</option>
+                            </select>
+                                 - <input type="tel" size="20">
+                                 - <input type="tel" size="20"></td></tr>
+                    <tr><td>- 이메일</td><td colspan="2"><input type="text" size="20" value="">
+                                @ <select name="email">
+                                <option value="선택" checked>선택</option>
+                                <option value="naver">naver.com</option>
+                                <option value="daum">daum.net</option>
+                                <option value="nate">nate.com</option>
+                                <option value="google">gmail.com</option>
+                                <option value="">직접입력</option>
+                            </select></td></tr>
+                    <tr><td>- 자기소개</td><td><textarea name="자기소개" id="" cols="50" rows="5"></textarea>
+                    </td></tr>
+
+        </tbody>
+    </table>             
+    </form> 
+</body>
+</html>

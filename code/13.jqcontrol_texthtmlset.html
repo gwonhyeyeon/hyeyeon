@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>jQuery basic</title>
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('h1:nth-child(1)').text('<a href="#">text()</a>')
+            $('h1:nth-child(2)').html('<a href="#">html()</a>')
+        });
+    </script>
+</head>
+<body>
+    <h1>Header -0</h1>
+    <h1>Header -1</h1>
+</body>
+</html>
+<!--text()메소드를 사용하면 일반 글자처럼 출력
+html() 메소드를 사용하면 글자에 태그가 적용-->

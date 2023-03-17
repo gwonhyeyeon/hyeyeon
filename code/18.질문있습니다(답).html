@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>애니메이션 응용</title>
+    <style>
+        /*@keyframes 어노테이션 사용*/
+        @keyframes imagerotation {
+            /* translate으로 초기 위치 지정(x축으로 300px) 
+            나중 위치는 x축으로 0px*/
+            0% {transform: translate(300px);}
+            100% {transform: translate(0px);}
+        }
+        /*p태그에 애니메이션 입력*/
+        p{
+            animation-name: imagerotation;
+            /*animation-name: imagerotation; -> name은 @keyframes imagerotation 에서 
+            사용된 이름을 써야 애니메이션 동작이 적용됨*/
+            animation-duration: 2s;
+            /*animation-duration: 2s ->애니메이션 1회 동작 당 시간*/
+            animation-iteration-count: infinite;
+            animation-iteration-count: 3;
+            /*animaiton-iteration-count: infinite; 반복횟수*/
+        }
+    </style>
+</head>
+<body>
+    <h3>질문있습니다</h3>
+    <p><img src="C:\Users\Administrator\Desktop\풀스택\8일차\question.png">질문 있습니다.</p>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        /*hover를 활용해 배경색 생성되게 한다.*/
+        #menubar:hover{
+            background: olive;
+        }
+        /*menubar ul 목록의 넓이를 설정한다.*/
+        #menubar ul{
+            margin: 0;
+            padding: 0;
+            width: 567px; /*모든 아이템 <li>를 한 줄에 품을 수 있는 폭*/
+        }
+        #menubar ul li{
+            display: inline;
+            list-style-type: none;
+            padding: 0px 15px; /*top bottom 0, left, right=15;*/
+
+        }
+        #menubar ul li a{
+            /*하얀색으로 해서 초기 화면에 아무것도 보이지 않는 것 처럼 만듬*/
+            color: white;
+            text-decoration: none; /*링크 보이지 않게 처리 */
+        }
+        /*글자에 가져다 대면 글자가 보라색으로*/
+        #menubar ul li a:hover{
+            color: violet;
+        }
+    </style>
+</head>
+<body>
+    <nav id="menubar">
+        <ul>
+            <li><a href="#">뭐줄까?</a></li>
+            <li><a href="#">아메리카노</a></li>
+            <li><a href="#">카푸치노</a></li>
+            <li><a href="#">카페라떼</a></li>
+            <li><a href="#">다른거!</a></li>
+        </ul>
+    </nav>   
+</body>
+</html>

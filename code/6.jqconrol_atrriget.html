@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery basic</title>
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+        $(document).ready(function(){
+            var src=$('script').attr('src');
+            alert(src);
+        });
+    </script>
+</head>
+<body>
+</body>
+</html>
+<!--속성 조작
+attr() 메소드를 사용
+매개변수를 넣는 방법에 따라 속성을 지정할 수도 있고 추출할 수도 있음
+attr() 문서 객체의 속성 조작
+속성 추출
+attr() 메소드에 매개변수를 하나만 입력 -> 해당 속성 추출
+여러 개의 문서 객체를 선택 -> 첫 번째 문서 객체의 속성을 추출
+예> var src=$('img').attr('src');
+의미 : img태그의 src속성을 추출합니다. 
+
+속성을 지정하는 방법
+1. 첫 번째 매개변수에 속성의 이름을 입력하고 두번째 매개변수에 속성 값을 입력하는 방법
+    $('img').attr('src','http://placehoid.it/300*200')
+    width: 300;
+    height : 200
+});
+2. attr() 메소드의 매개변수에 객체를 넣어 속성을 조작하는 방법
+$('img').attr({
+    src:'http://palcehold.it/300*200',
+    width: 300,
+    height: 200
+});
+
+3. 첫 번째 매개변수에 속성의 이름을 입력하고 두 번째 매개변수에 함수를 입력하는 방법
+$('img').attr('src', function(index){   //src첫번째 매개변수, index 두번째
+    var size = (index+1)*100; //변수를 선언함
+    return 'http://placehold.it/' +size + 'x100' //반환한다  
+})-->

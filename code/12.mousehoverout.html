@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>마우스를 올려보세요</h3>
+    <hr>
+    <img src="C:\Users\Administrator\Desktop\풀스택\10일차\banana.png" alt="이미지"
+            onmouseover="this.src='C:/Users/Administrator/Desktop/풀스택/10일차/apple.png'"
+            onmouseout="this.src='C:/Users/Administrator/Desktop/풀스택/10일차/banana.png'">
+</body>
+</html>
+<!--이벤트 처리기
+    이벤트가 발생하는 것을 감지하는 역할이다
+    핸들러: 하나의 요소에 하나의 이벤트 처리가 가능하다
+    이벤트가 발행했을 때 그 처리를 담당하는 실행함수를 가르킨다
+
+    리스너: 하나의 요소에 복수의 이벤트 처리가 가능하다
+            특정한 이벤트에 대해서 이렁날 동작을 정의할 수 있다. 
+            리스너+핸들러를 합쳐서 이벤트 리스너 라고도 한다. 
+            구체적으로 예를 들어
+            click이벤트 
+            onclick 이벤트 리스너
+            function(){} 이벤트 핸들러...이벤트 객체를 인수로 받을 수 있다, 이벤트의 성질을 
+            결정하거나 기본동작을 막을 수 있다. 
+
+    웹 브라우저는 이벤트 리스너에 연결된 이벤트 핸들러를 실행하게 됩니다. 
+
+-->
