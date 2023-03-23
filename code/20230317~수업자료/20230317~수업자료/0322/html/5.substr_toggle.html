@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setInterval()로 텍스트 회전</title>
+</head>
+
+<body>
+    <h3>텍스트가 자동 회전하며, 마우스로 클릭하면 중단합니다.</h3>
+    <hr>
+    <!-- span 태그 부분의 글자가 계속 순환됨 -->
+    <div>
+        <span id="div" style="background-color: yellow;">자동 회전하는 텍스트입니다.</span>
+    </div>
+    <script>
+        var div = document.getElementById("div");
+        //200밀리초 주기로 doRotate() 호출
+        var timerID = setInterval("doRotate()", 200);
+        //클릭 이벤트 리스너 (div객체가 클릭되면 무명함수 수행)
+        var doRotate = function () {
+                    //div 태그의 텍스트 입력
+                    var str = div.innerHTML;
+                    //첫 번째 문자를 획득
+                    //str  텍스트의 첫 문자 알아내기 (인덱스 0부터 1개수만큼 새로운 문자열 리턴)
+                    var firstChar = str.substr(0, 1);
+                    //두 번재부터 마지막까지 문자 저장
+                    var remains = str.substr(1, str.length - 1);
+                    //첫 번째 문자를 가장 뒤로 보냄
+                    str = remains + firstChar;
+                    //변경 정보를 div 태그로 전송, timer가 지날 때마다 동작 반복
+                    //문자열을 하나씩 지우고 뒤로 이동시킴
+                    div.innerHTML = str;
+                }
+
+        // 자동 회전 toggle 
+
+        // let isOrdered = false;
+
+        // div.addEventListener("click", function (e) {
+
+        //     if (!isOrdered) {
+
+        //         clearInterval(timerID);
+        //         isOrdered = true;
+        //     }
+        //     else {
+        //         timerID = setInterval("doRotate()", 200);
+        //         isOrdered = false;
+        //     }
+
+        // })
+
+ let isOrdered = false;
+ idx=1;
+
+div.addEventListener("click", function (e) {
+idx++;
+if (!isOrdered) {
+
+    clearInterval(timerID);
+    isOrdered = true;
+}
+else {
+    timerID = setInterval("doRotate()", 200 - 10*idx );
+    isOrdered = false;
+}
+
+})
+
+    </script>
+</body>
+
+</html>
